@@ -1,0 +1,107 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["@typescript-eslint", "react-hooks", "jest", "prettier", "simple-import-sort","promise"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "plugin:prettier/recommended",
+    "plugin:import/typescript",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "rules": {
+    "prettier/prettier":"off",
+    "@typescript-eslint/no-empty-function":"warn",
+    "@typescript-eslint/no-explicit-any":"warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "no-undef":"off",
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off",
+    "import/order": "off",
+      "quotes": [
+            1,
+            "single"
+        ],
+        "no-multi-spaces": 0,
+        "no-trailing-spaces": 0,
+    
+        "no-unused-vars": 0,
+        "no-var": 2,
+        "semi": [
+            2,
+            "never"
+        ],
+        "no-extra-semi": 2,
+        "no-case-declarations": 0,
+        "no-duplicate-case": 0,
+        "no-useless-escape": 0,
+        "no-console": [
+            "warn",
+            {
+                "allow": [
+                    "warn",
+                    "error",
+                    "debug",
+                    "info"
+                ]
+            }
+        ],
+        "indent": [
+            "warn",
+            4
+        ],
+        "key-spacing": [
+            "warn"
+        ],
+        "object-curly-spacing": [
+            "warn",
+            "always"
+        ],
+        "promise/no-nesting": 1,
+        "promise/catch-or-return": 2,
+        "promise/prefer-await-to-then": 1,
+        "no-multiple-empty-lines": [
+            "warn",
+            {
+                "max": 1
+            }
+        ],
+        "space-unary-ops": "warn",
+        "space-infix-ops": "warn",
+        "spaced-comment": [
+            "warn",
+            "always"
+        ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
